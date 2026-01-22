@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bintang Fausta Ilhami - Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f7f9fc;
+      color: #222;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(135deg, #007bff, #00b4d8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+.profile-pic {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0; /* biar kotak sempurna */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+    .profile-pic:hover {
+      transform: scale(1.08);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      white-space: nowrap;
+      border-right: 4px solid white;
+      width: 0;
+      overflow: hidden;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeIn 3s ease 3s forwards;
+    }
+
+    header a {
+      margin-top: 35px;
+      padding: 12px 28px;
+      background: white;
+      color: #007bff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      opacity: 0;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease 4s forwards;
+    }
+
+    header a:hover {
+      background: #00b4d8;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 70px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #007bff;
+      margin-bottom: 15px;
+      border-left: 5px solid #007bff;
+      padding-left: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 6px 15px;
+      border-radius: 20px;
+      margin: 6px;
+      font-size: 0.95em;
+      transition: 0.3s;
+    }
+
+    .skills span:hover {
+      background: #00b4d8;
+      transform: scale(1.1);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: #f0f7ff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .certificates ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .certificates li {
+      background: #f0f7ff;
+      padding: 12px 18px;
+      margin: 8px 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+
+    /* Animations */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <img src="foto-bintang.png" alt="Bintang Fausta Ilhami" class="profile-pic" />
+  <h1>Bintang Fausta Ilhami</h1>
+  <p>Web Developer | Mahasiswa Sistem Informasi</p>
+  <div style="display: flex; gap: 15px; margin-top: 35px;">
+    <a href="#tentang" style="margin-top: 0; opacity: 1; animation: none;">Lihat Profil</a>
+    <a href="https://ilhamifausta50-png.github.io/alattulisku.id/" target="_blank" style="margin-top: 0; opacity: 1; animation: none; background: #001f3f; color: white;">Buka Web ATK</a>
+  </div>
+</header>
+
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah mahasiswa aktif Sistem Informasi Universitas Gunadarma dengan passion kuat dalam implementasi teknologi untuk solusi bisnis.
+    Terampil dalam pengembangan web, mencakup front-end dan back-end menggunakan <b>HTML, CSS, JavaScript, dan PHP/MySQL</b>.
+    Berorientasi pada proyek, efisiensi, dan pengalaman pengguna yang baik.</p>
+  </section>
+
+  <section id="keahlian">
+    <h2>Keahlian</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>Python</span>
+      <span>C#</span>
+      <span>SQL</span>
+    </div>
+  </section>
+
+  <section id="pendidikan">
+    <h2>Pendidikan</h2>
+    <ul>
+        <li><b>SD AL-HIKMAH</b> — 2011-2017</li>
+        <li><b>MADRASAH MIFTAHUL UMAM</b> — 2017-2020</li>
+        <li><b>SMAN 66 JAKARTA</b> — 2020-2023</li>
+      <li><b>UNIVERSITAS GUNADARMA</b> — S1 Sistem Informasi</li>
+    </ul>
+  </section>
+
+ <section id="portfolio">
+  <h2>Portofolio</h2>
+  <div class="portfolio-grid">
+    <div class="project">
+      <h3>E-Commerce Alat Tulis</h3>
+      <p>Clone marketplace alat tulis dengan fitur filter kategori, search bar, dan tema warna biru muda.</p>
+      <a href="https://ilhamifausta50-png.github.io/alattulisku.id/" target="_blank" style="display: inline-block; margin-top: 10px; color: #007bff; text-decoration: none; font-weight: bold; font-size: 0.9em;">Kunjungi Website →</a>
+    </div>
+
+    <div class="project">
+      <h3>Aplikasi Rental PS</h3>
+      <p>Sistem penyewaan PlayStation berbasis Python dan MySQL, dengan fitur login, kwitansi PDF, dan riwayat transaksi.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Dashboard Keuangan</h3>
+      <p>Proyek latihan untuk menampilkan laporan keuangan dengan visualisasi data sederhana.</p>
+    </div>
+  </div>
+</section>
+
+ <section id="sertifikat" class="certificates">
+  <h2>Sertifikat & Penghargaan</h2>
+  <ul>
+    <li>
+      <div style="border-left: 3px solid #007bff; padding-left: 15px; margin-bottom: 20px;">
+        <strong style="font-size: 1.1em; color: #222;">Pelatihan Instalasi LAN Nirkabel</strong> 
+        <span style="display: block; color: #007bff; font-weight: 600; font-size: 0.9em;">Universitas Gunadarma | Okt 2025</span>
+        
+        <p style="font-size: 0.85em; color: #555; margin-top: 8px; line-height: 1.6;">
+          Berhasil menyelesaikan pelatihan <i>"Introduction to Wireless LAN Installation"</i> [cite: 8, 9] dengan penguasaan materi meliputi:
+        </p>
+        
+        <ul style="list-style: circle; padding-left: 20px; font-size: 0.8em; color: #666; margin-top: 5px;">
+          <li>Pengenalan LAN & Teknologi Nirkabel </li>
+          <li>Pemahaman TCP/IP </li>
+          <li>Instalasi dan Konfigurasi Wireless LAN </li>
+        </ul>
+        
+        <p style="font-size: 0.75em; color: #999; margin-top: 8px;">No. Sertifikat: 448792 [cite: 4]</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>Email: <a href="mailto:ilhamifausta50@gmail.com">ilhamifausta50@gmail.com</a><br>
+       Instagram: <a href="https://instagram.com/bintangs_12" target="_blank">@bintangs_12</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Bintang Fausta Ilhami. 
+  </footer>
+
+  <script>
+    // Reveal animation saat scroll
+    const sections = document.querySelectorAll("section");
+    const reveal = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) sec.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", reveal);
+    reveal();
+  </script>
+</body>
+</html>
